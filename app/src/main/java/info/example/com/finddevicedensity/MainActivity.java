@@ -39,6 +39,11 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        if(getSupportActionBar() != null) {
+            getSupportActionBar().setTitle("");
+            getSupportActionBar().setDisplayHomeAsUpEnabled(false);
+        }
+
         TextView densityText = findViewById(R.id.tv_density);
         densityText.setText("This device density is : " + getDensityByDpi());
     }
